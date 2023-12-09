@@ -1,6 +1,6 @@
 specVersion: 0.0.5
 schema:
-  file: ./schema.graphql
+  file: schema.graphql
 dataSources:
   - kind: ethereum
     name: Oven
@@ -19,13 +19,13 @@ dataSources:
         - OwnershipTransferred
       abis:
         - name: Oven
-          file: ./abis/Oven.json
+          file: Oven/abis/Oven.json
       eventHandlers:
-        - event: AaveSupplyAndBorrow(indexed address,indexed
-            address,uint256,uint256,indexed address)
+        - event: AaveSupplyAndBorrow(indexed address,indexed address,uint256,uint256,indexed
+            address)
           handler: handleAaveSupplyAndBorrow
         - event: AaveWithdraw(indexed address,indexed uint256,indexed address)
           handler: handleAaveWithdraw
         - event: OwnershipTransferred(indexed address,indexed address)
           handler: handleOwnershipTransferred
-      file: ./src/oven.ts
+      file: Oven/Oven.wasm

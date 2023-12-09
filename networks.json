@@ -4,5 +4,17 @@
       "address": "0xad2e65a73b714d5c5f5a49a388023cd36e0443db",
       "startBlock": 58510667
     }
+  },
+  "mumbai": {
+    "Oven": {
+      "address": "0x5A5B14594f1BF93656a2B705ECdb873373A4eFe9",
+      "startBlock": 43376271
+    }
+  },
+  "scroll-sepolia": {
+    "Oven": {
+      "address": "0xcf17664006851A27d5Bd93d497f30853AC558792",
+      "startBlock": 2536109
+    }
   }
 }
