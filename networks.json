@@ -1,0 +1,8 @@
+{
+  "arbitrum-goerli": {
+    "Oven": {
+      "address": "0xad2e65a73b714d5c5f5a49a388023cd36e0443db",
+      "startBlock": 58510667
+    }
+  }
+}

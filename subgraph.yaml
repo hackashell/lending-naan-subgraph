@@ -1,0 +1,30 @@
+specVersion: 0.0.5
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: Oven
+    network: arbitrum-goerli
+    source:
+      address: "0xad2e65a73b714d5c5f5a49a388023cd36e0443db"
+      abi: Oven
+      startBlock: 58510667
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - AaveSupplyAndBorrow
+        - AaveWithdraw
+        - OwnershipTransferred
+      abis:
+        - name: Oven
+          file: ./abis/Oven.json
+      eventHandlers:
+        - event: AaveSupplyAndBorrow(indexed address,indexed address,uint256,uint256,indexed address)
+          handler: handleAaveSupplyAndBorrow
+        - event: AaveWithdraw(indexed address,indexed uint256,indexed address)
+          handler: handleAaveWithdraw
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferred
+      file: ./src/oven.ts
