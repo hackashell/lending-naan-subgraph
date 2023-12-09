@@ -8,7 +8,10 @@
     "create-local": "graph create --node http://localhost:8020/ lending-naan",
     "remove-local": "graph remove --node http://localhost:8020/ lending-naan",
     "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 lending-naan",
-    "test": "graph test"
+    "test": "graph test",
+    "prepare:arbitrum": "graph build --network arbitrum-goerli && graph deploy --studio lending-naan",
+    "prepare:mumbai": "graph build --network mumbai && graph deploy --studio lending-naan-mumbai",
+    "prepare:scroll": "graph build --network scroll-sepolia && graph deploy --studio lending-naan-scroll"
   },
   "dependencies": {
     "@graphprotocol/graph-cli": "0.63.0",
